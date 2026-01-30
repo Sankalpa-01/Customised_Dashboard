@@ -61,6 +61,8 @@ npm run dev
 # App runs on http://localhost:5173
 ```
 
+---
+
 ## Project Structure
 ``` bash
 dashboard-app/
@@ -80,6 +82,8 @@ dashboard-app/
     │   └── utils/              # Widget Registry (Scalability Pattern)
 ```
 
+---
+
 ## Design and Technical Decisions
 ### 1. The Widget Registry Pattern
 #### Instead of hardcoding widgets into the grid, I created a widgetRegistry.js file. This maps widget types (e.g., 'chart', 'text') to their respective React components.
@@ -97,5 +101,6 @@ dashboard-app/
 #### Integrating animations with drag-and-drop can cause layout thrashing.
 #### Solution: I separated the "Drag" logic (handled by dnd-kit) from the "Animation" logic (handled by framer-motion) into nested divs inside WidgetWrapper.jsx and used React.memo to prevent heavy re-renders during dragging.
 
-### Submitted by: Sankalpa Panda 
-### Date: 30th January 2026
+---
+
+### Submitted by: Sankalpa Panda, Date: 30th January 2026
