@@ -15,7 +15,7 @@ function DashboardApp() {
     );
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-green-400 font-mono selection:bg-green-900 selection:text-white">
+    <div className="min-h-screen w-screen overflow-x-hidden bg-zinc-950 text-green-400 font-mono selection:bg-green-900 selection:text-white">
       <Toaster
         position="top-center"
         reverseOrder={false}
