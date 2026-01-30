@@ -110,4 +110,17 @@ dashboard-app/
 
 ---
 
+## 🚀 Future Improvements 
+
+### If I had more time, I would implement:
+#### 1. User Authentication: Allow multiple users to have their own private dashboards.
+
+#### 2. Live Data Feeds: Connect the charts to a WebSocket to show real-time live data instead of static mock data.
+
+#### 3. Undo/Redo: Implement a history stack to allow users to revert accidental changes.
+
+#### 4. Mobile View: Optimize the drag-and-drop handles for touch devices
+
+---
+
 ### Submitted by: Sankalpa Panda, Date: 30th January 2026
