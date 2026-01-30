@@ -34,7 +34,6 @@ function DashboardApp() {
         }}
       />
 
-      {/* Dark Navbar */}
       <nav className="border-b border-green-900/50 bg-black/50 backdrop-blur-md p-4 flex justify-between items-center sticky top-0 z-50">
         <h1 className="text-xl font-bold tracking-tighter text-green-500 flex items-center gap-2">
           <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
