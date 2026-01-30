@@ -1,0 +1,14 @@
+# Dependency directories
+node_modules/
+*/node_modules/
+
+# Environment variables (Sensitive data)
+.env
+*/.env
+
+# Build outputs
+dist/
+build/
+
+# System files
+.DS_Store
