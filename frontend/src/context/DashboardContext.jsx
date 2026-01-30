@@ -10,13 +10,15 @@ export const DashboardProvider = ({ children }) => {
   const [layout, setLayout] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
   useEffect(() => {
     fetchDashboard();
   }, []);
 
   const fetchDashboard = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/dashboard");
+      const res = await axios.get(`${API_URL}/api/dashboard`);
       if (res.data.widgets) {
         setWidgets(res.data.widgets);
         setLayout(res.data.layout);
@@ -54,7 +56,7 @@ export const DashboardProvider = ({ children }) => {
 
   const saveDashboard = async () => {
     try {
-      await axios.post("http://localhost:5000/api/dashboard", {
+      await axios.post(`${API_URL}/api/dashboard`, {
         layout,
         widgets,
       });
