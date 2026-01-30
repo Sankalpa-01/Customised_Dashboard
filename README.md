@@ -82,20 +82,20 @@ dashboard-app/
 
 ## Design and Technical Decisions
 ### 1. The Widget Registry Pattern
-Instead of hardcoding widgets into the grid, I created a widgetRegistry.js file. This maps widget types (e.g., 'chart', 'text') to their respective React components.
-Benefit: Adding a new widget type (like a "Weather Widget") only requires adding one line to the registry, making the app highly extensible.
+#### Instead of hardcoding widgets into the grid, I created a widgetRegistry.js file. This maps widget types (e.g., 'chart', 'text') to their respective React components.
+#### Benefit: Adding a new widget type (like a "Weather Widget") only requires adding one line to the registry, making the app highly extensible.
 
 ### 2. MongoDB for Flexible Configuration 
-I chose MongoDB because widget configurations are unstructured data. A text widget stores a content string, while a chart widget stores a data array.
-Benefit: MongoDB allows us to store these varying config objects in the same collection without complex SQL joins.
+#### I chose MongoDB because widget configurations are unstructured data. A text widget stores a content string, while a chart widget stores a data array.
+#### Benefit: MongoDB allows us to store these varying config objects in the same collection without complex SQL joins.
 
 ### 3. Context API + Custom Hooks
-State management is handled via React Context (DashboardContext).
-Benefit: This avoids "prop drilling" and allows any component (like the Save Button in the Navbar) to access the state and trigger a save action.
+#### State management is handled via React Context (DashboardContext).
+#### Benefit: This avoids "prop drilling" and allows any component (like the Save Button in the Navbar) to access the state and trigger a save action.
 
 ### 4. Framer Motion + Dnd-Kit Optimization
-Integrating animations with drag-and-drop can cause layout thrashing.
-Solution: I separated the "Drag" logic (handled by dnd-kit) from the "Animation" logic (handled by framer-motion) into nested divs inside WidgetWrapper.jsx and used React.memo to prevent heavy re-renders during dragging.
+#### Integrating animations with drag-and-drop can cause layout thrashing.
+#### Solution: I separated the "Drag" logic (handled by dnd-kit) from the "Animation" logic (handled by framer-motion) into nested divs inside WidgetWrapper.jsx and used React.memo to prevent heavy re-renders during dragging.
 
-Submitted by: Sankalpa Panda 
-Date: 30th January 2026
+### Submitted by: Sankalpa Panda 
+### Date: 30th January 2026
