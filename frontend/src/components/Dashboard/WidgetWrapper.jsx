@@ -1,11 +1,10 @@
-import React, { memo } from "react"; // Import memo
+import React, { memo } from "react";
 import { useDashboard } from "../../hooks/useDashboard";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { X, GripVertical } from "lucide-react";
 import { motion } from "framer-motion";
 
-// Wrap in memo to prevent unnecessary re-renders during drag
 const WidgetWrapper = memo(({ widget }) => {
   const { removeWidget, updateWidget } = useDashboard();
 
@@ -61,7 +60,6 @@ const WidgetWrapper = memo(({ widget }) => {
         {/* Content */}
         <div className="flex-1 overflow-hidden relative p-2">
           {widget.component && (
-            /* FIX 2: Pass the onChange prop so the widget can update state */
             <widget.component
               config={widget.config}
               onChange={(newConfig) =>
