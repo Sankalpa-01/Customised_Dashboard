@@ -2,7 +2,7 @@
 
 ## 🔗 Live Links
 * **Live Demo (Frontend):** [Click here to view the App](https://customizable-dashboard-assignment.vercel.app) *(Replace this with your actual Vercel link if different)*
-* **Backend API:** [[https://customised-dashboard-backend.onrender.com]https://customised-dashboard-backend.onrender.com]
+* **Backend:** [https://customised-dashboard-backend.onrender.com](https://customised-dashboard-backend.onrender.com)
 * **GitHub Repository:** [https://github.com/Sankalpa-01/Customised_Dashboard](https://github.com/Sankalpa-01/Customised_Dashboard)
 
 ---
